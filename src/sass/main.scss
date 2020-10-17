@@ -846,10 +846,22 @@ input{
     align-items: center;
     font-size: 20px;
     margin-top: 70px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
   }
 
   &__bottom-txt{
+    display: flex;
+    align-items: center;
 
+    &:before{
+      content: "";
+      display: block;
+      width: 60px;
+      height: 60px;
+      background: url("../img/massege.png") center center no-repeat;
+      margin-right: 15px;
+    }
   }
 
   &__bottom-right{
@@ -904,6 +916,11 @@ input{
         text-align: center;
       }
 
+      .cards__img ~ .cards__content .cards__btn{
+        text-align: center;
+      }
+
+      .cards__btn,
       .cards__date{
         text-align: left;
       }
