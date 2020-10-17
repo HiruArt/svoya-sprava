@@ -642,6 +642,374 @@ input{
 
 }
 
+.home-page{
+
+  @include from-992 {
+    position: relative;
+
+    .header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.home{
+
+  &__inner{
+
+  }
+
+  &__content{
+    display: flex;
+
+    @include from-992 {
+      height: 100vh;
+      position: relative;
+      padding-top: 80px;
+      padding-bottom: 110px;
+    }
+
+  }
+
+  &__info{
+    max-width: 640px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__info-title{
+    color: black;
+    font-size: 72px;
+    font-family: 'Lora', sans-serif;
+    font-weight: 700;
+  }
+
+  &__info-txt{
+    color: #666666;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+
+  &__info-form{
+    display: flex;
+    width: 100%;
+
+    form{
+      position: relative;
+      width: 100%;
+      display: flex;
+
+      background-color: rgb(255, 255, 255);
+      border-radius: 40px;
+      overflow: hidden;
+    }
+  }
+
+  .home__info-form-input{
+    background: transparent;
+    font-size: 15px;
+    color: #666666;
+    padding-left: 30px;
+    padding-right: 250px;
+    height: 65px;
+    border-width: 1px;
+    border-color: rgb(204, 204, 204);
+    border-style: solid;
+    width: 100%;
+    border-radius: 40px;
+  }
+
+  .home__info-form-btn{
+    position: absolute;
+    right: -2px;
+    top: 0;
+    border: 0;
+    background: #ff4c4f;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    border-radius: 40px;
+    max-width: 250px;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover{
+      background: #bf0909;
+    }
+  }
+
+  &__sphere{
+    width: 100%;
+    height: 100%;
+  }
+
+  &__sphere-list{
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  &__sphere-item{
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    &--1{
+      width: 256px;
+      height: 256px;
+      left: 56%;
+      top: 45%;
+    }
+
+    &--2{
+      width: 225px;
+      height: 225px;
+      left: 22%;
+      top: 28%;
+    }
+
+    &--3{
+      width: 180px;
+      height: 180px;
+      left: 83%;
+      top: 21%;
+    }
+
+    &--4{
+      width: 180px;
+      height: 180px;
+      left: 87%;
+      top: 80%;
+    }
+
+    &--4{
+      width: 180px;
+      height: 180px;
+      left: 87%;
+      top: 80%;
+    }
+    &--5{
+      width: 180px;
+      height: 180px;
+      left: 40%;
+      top: 78%;
+    }
+
+    &--6{
+      width: 110px;
+      height: 110px;
+      left: 18%;
+      top: 67%;
+    }
+
+    &--7{
+      width: 110px;
+      height: 110px;
+      left: 44%;
+      top: 11%;
+    }
+
+    &--8{
+      width: 110px;
+      height: 110px;
+      left: 94%;
+      top: 51%;
+    }
+
+    &--9{
+      width: 110px;
+      height: 110px;
+      left: 94%;
+      top: 51%;
+    }
+  }
+
+  &__sphere-preview{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 1px solid black;
+    transition: .3s;
+    cursor: pointer;
+
+    &.hover{
+      border-color: #bf0909;
+    }
+  }
+
+  &__sphere-item.active  &__sphere-preview{
+    opacity: 0;
+  }
+
+  &__sphere-preview-ico{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__sphere-preview-ico-item{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__sphere-preview-ico-hover-bg{
+    opacity: 0;
+    transition: .3s;
+    background: #bf0909;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__sphere-preview.hover &__sphere-preview-ico-hover-bg{
+    opacity: 1;
+  }
+
+  &__sphere-preview-ico-hover{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__sphere-preview.hover &__sphere-preview-ico-hover{
+    opacity: 1;
+  }
+
+  &__sphere-detail{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: .5s all;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+    background: #bf0909;
+    border-radius: 50%;
+    //width: 180%;
+    //height: 180%;
+    width: 540px;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  //&__sphere-item.active &__sphere-detail{
+  &__sphere-detail.active{
+    opacity: 1;
+    z-index: 11;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__sphere-detail-inner{
+    display: flex;
+    max-width: 330px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__sphere-detail-close{
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: -25px;
+    width: 25px;
+    height: 25px;
+    background: url("../img/ico/close.svg") center/contain no-repeat;
+    transition: .3s;
+
+    &:hover{
+      transform: rotate(90deg);
+    }
+  }
+
+  &__sphere-detail-ico{
+    max-width: 55px;
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  &__sphere-detail-ico-i{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__sphere-detail-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sphere-detail-title{
+    font-weight: 900;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  &__sphere-detail-desc{
+    color: white;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+
+  &__sphere-detail-btn{
+
+  }
+
+  &__sphere-detail-btn-i{
+
+
+    .site-btn__ico{
+      width: 10px;
+    }
+  }
+
+}
+
+
 .footer{
 
   &__inner{

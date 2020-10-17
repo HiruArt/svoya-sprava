@@ -36,6 +36,31 @@ if (UAString.indexOf("Trident") !== -1 && UAString.indexOf("rv:10") !== -1)
 
 $(document).ready(function () {
 
+  $(".home__sphere-preview").hover(
+    function() {
+      $( this ).addClass("hover");
+    }, function() {
+      $( this ).removeClass("hover");
+    }
+  );
+
+  $(document).on('click', '.home__sphere-preview', function (e) {
+    $('[data-sphere-detail]').removeClass('active');
+    $('[data-sphere-item]').removeClass('active');
+
+    $(this).closest('.home__sphere-item').addClass('active');
+    var numberItem = $(this).closest('.home__sphere-item').attr('data-sphere-item');
+    $('[data-sphere-detail=' + numberItem + ']').addClass('active');
+  });
+
+  $(document).on('click', '.home__sphere-detail-close', function (e) {
+    var numberItem = $(this).closest('.home__sphere-detail').attr('data-sphere-detail');
+    $('[data-sphere-item=' + numberItem + ']').removeClass('active');
+    $(this).closest('.home__sphere-detail').removeClass('active');
+  });
+
+
+
   var bLazy = new Blazy({
     src: 'data-blazy' // Default is data-src
   });

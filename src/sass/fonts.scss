@@ -55,14 +55,14 @@
 //  font-display: swap;
 //}
 //
-//@font-face {
-//  font-family: 'HelveticaNeueCyr';
-//  src: url('../fonts/HelveticaNeueCyr-Heavy.woff2') format('woff2'),
-//  url('../fonts/HelveticaNeueCyr-Heavy.woff') format('woff');
-//  font-weight: 900;
-//  font-style: normal;
-//  font-display: swap;
-//}
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-Heavy.woff2') format('woff2'),
+  url('../fonts/HelveticaNeueCyr-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'HelveticaNeueCyr';
