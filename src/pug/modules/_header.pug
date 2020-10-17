@@ -1,0 +1,56 @@
+header.header
+	.header__inner.site-container
+		.header__content
+			a(href="./").header__logo
+				.header__logo-big
+					picture
+						source(srcset="./img/sslogo.webp" type="image/webp")
+						img(src="./img/sslogo.png" alt="img" width='237' height='48')
+				.header__logo-small
+					picture
+						source(srcset="./img/sslogo-small.png" type="image/webp")
+						img(src="./img/sslogo-small.png" alt="img" width='155' height='32')
+
+			.header__nav
+				.header__nav-title.tablet#menu-btn
+					span  Меню
+					.header__nav-title-ico
+						include ../../img/ico/burger.svg
+				.header__nav-list#menu-list
+					.header__nav-item
+						a(href="#").header__nav-link
+							span Продукти
+					.header__nav-item
+						a(href="#").header__nav-link
+							span Послуги і підтримка
+					.header__nav-item
+						a(href="#").header__nav-link
+							span Реалізовано
+					.header__nav-item
+						a(href="#").header__nav-link
+							span Навчання
+					.header__nav-item
+						a(href="#").header__nav-link
+							span Прес-центр
+					.header__nav-item
+						a(href="#").header__nav-link
+							span Про нас
+					.header__nav-item
+						a(href="#").header__nav-link.active
+							span Контакти
+
+			.header__column
+				.header__social
+					a(href="+380412446432").header__social-item
+						.header__social-ico
+							include ../../img/ico/phone-black.svg
+						| +38 (0412) 44-64-32
+					a(href="mailto:office@sprava.in.ua").header__social-item
+						.header__social-ico
+							include ../../img/ico/mail-black.svg
+						| office@sprava.in.ua
+
+				.header__planet
+					a(href="javascript:void(0);").header__planet-item
+						.header__planet-ico
+							include ../../img/ico/planet.svg

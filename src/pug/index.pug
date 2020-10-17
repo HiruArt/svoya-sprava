@@ -1,0 +1,26 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "homepage";
+  - var pageActive = "homepage";
+block content
+  //
+    .b-lazy.webp-img(data-webp="./img/motivated-bg.webp"
+      data-webp-mobile="./img/motivated-bg-mobile.webp"
+      data-img="./img/motivated-bg.png"
+      data-img-mobile="./img/motivated-bg-mobile.png")
+
+    picture
+      source(srcset="./img/logo.webp" type="image/webp")
+      source(srcset="./img/logo.png" type="image/png")
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+
+  div.main-wrap
+    div.prevpage(style="margin: 0 auto; height: 490px; display: flex; justify-content: center; color: black; flex-direction: column; align-items: center;")
+      div
+        a(href="./index1.html" style="font-size: 18px;") Главная
+      div
+        a(href="./press-center.html" style="font-size: 18px;") Прес-центр
+      div
+        a(href="./contacts.html" style="font-size: 18px;") Контакты
