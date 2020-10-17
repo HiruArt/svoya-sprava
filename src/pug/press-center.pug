@@ -1,8 +1,189 @@
 extends _layout
 
 block vars
-	- var pageTitle = "Press center page";
-	- var pageClass = "";
-	- var pageActive = "pressCenterPage";
+  - var pageTitle = "Press center page";
+  - var pageClass = "";
+  - var pageActive = "pressCenterPage";
 block content
-	div.main-wrap
+  div.main-wrap
+    .pressroom
+      .pressroom__inner.site-container
+
+        .site-title
+          span Прес-центр
+
+        .pressroom__sort.sort-block
+          .sort-block__items
+            .sort-block__item
+              a(href='#').sort-block__link Новини Акции ...
+              ul.sort-block__list
+                li.sort-block__list-i
+                  input(type='checkbox' id='checkbox11')
+                  label(for="checkbox11") Новини
+                li.sort-block__list-i
+                  input(type='checkbox' id='checkbox12')
+                  label(for="checkbox12") Акції
+                li.sort-block__list-i
+                  input(type='checkbox' id='checkbox13')
+                  label(for="checkbox13") Події
+            .sort-block__item
+              a(href='#').sort-block__link Тематика
+              ul.sort-block__list
+                li.sort-block__list-i
+                  input(type='checkbox' id='checkbox21')
+                  label(for="checkbox21") Новини
+                li.sort-block__list-i
+                  input(type='checkbox' id='checkbox22')
+                  label(for="checkbox22") Акції
+                li.sort-block__list-i
+                  input(type='checkbox' id='checkbox23')
+                  label(for="checkbox23") Події
+            .sort-block__item
+              .sort-block__btn
+                a(href="#").site-btn
+                  span Вибрати
+
+        .pressroom__cards.cards
+          .cards__items
+            .cards__item
+              .cards__item-inner
+                .cards__label НОВИНИ
+                .cards__img
+                  img(src="./img/pressroom/press-r-1.png")
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title Успішні кейси, події, відповіді та консультації
+                  .cards__desc Успішні кейси, події, відповіді та консультації від провідних експертів для розвитку вашого бізнесу
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+            .cards__item
+              .cards__item-inner
+                .cards__label НОВИНИ
+                .cards__img
+                  img(src="./img/pressroom/press-r-2.jpg")
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title Успішні кейси, події, відповіді та консультації
+                  .cards__desc Успішні кейси, події, відповіді та консультації від провідних експертів для розвитку вашого бізнесу
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+            .cards__item
+              .cards__item-inner
+                .cards__label НОВИНИ
+                .cards__img
+                  img(src="./img/pressroom/press-r-3.jpg")
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title Успішні кейси, події, відповіді та консультації
+                  .cards__desc Успішні кейси, події, відповіді та консультації від провідних експертів для розвитку вашого бізнесу
+                  .cards__btn
+                    a(href="#").site-btn
+                    span Детальніше
+            .cards__item.cards__item--big
+              .cards__item-inner
+                .cards__label.red АКЦІЇ
+                .cards__img
+                  img(src="./img/pressroom/press-r-4.jpg")
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title АКЦІЯ! При замовлені послуги - Аудит в подарунок!
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+
+
+
+            .cards__item
+              .cards__item-inner
+                .cards__label НОВИНИ
+                .cards__img
+                  img(src="./img/pressroom/press-r-5.jpg")
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title Успішні кейси, події, відповіді та консультації
+                  .cards__desc Успішні кейси, події, відповіді та консультації від провідних експертів для розвитку вашого бізнесу
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+            .cards__item.cards__item--big
+              .cards__item-inner
+                .cards__label.red АКЦІЇ
+                .cards__img
+                  img(src="./img/pressroom/press-r-6.jpg")
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title АКЦІЯ! При замовлені послуги - Аудит в подарунок!
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+            .cards__item
+              .cards__item-inner
+                .cards__label НОВИНИ
+                .cards__img
+                  img(src="./img/pressroom/press-r-7.jpg")
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title Успішні кейси, події, відповіді та консультації
+                  .cards__desc Успішні кейси, події, відповіді та консультації від провідних експертів для розвитку вашого бізнесу
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+            .cards__item
+              .cards__item-inner
+                .cards__label НОВИНИ
+                .cards__img
+                  img(src="./img/pressroom/press-r-8.jpg")
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title Успішні кейси, події, відповіді та консультації
+                  .cards__desc Успішні кейси, події, відповіді та консультації від провідних експертів для розвитку вашого бізнесу
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+
+
+            .cards__item
+              .cards__item-inner
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title Успішні кейси, події, відповіді та консультації
+                  .cards__desc Успішні кейси, події, відповіді та консультації від провідних експертів для розвитку вашого бізнесу
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+            .cards__item
+              .cards__item-inner
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title Успішні кейси, події, відповіді та консультації
+                  .cards__desc Успішні кейси, події, відповіді та консультації від провідних експертів для розвитку вашого бізнесу
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+            .cards__item.cards__item--big
+              .cards__item-inner
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__desc Успішні кейси, події, відповіді та консультації від провідних експертів для розвитку вашого бізнесу
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+            .cards__item
+              .cards__item-inner
+                .cards__content
+                  .cards__date 02/02/2020
+                  .cards__title Успішні кейси, події, відповіді та консультації
+                  .cards__desc Успішні кейси, події, відповіді та консультації від провідних експертів для розвитку вашого бізнесу
+                  .cards__btn
+                    a(href="#").site-btn
+                      span Детальніше
+
+        .pressroom__bottom
+          .pressroom__bottom-txt Підпишіться на наші сповіщення, тоді Ви не пропустите важливі новини, корисні статті та вигідні акції
+          .pressroom__bottom-right
+            .pressroom__bottom-form
+              input(type='text' placeholder='Введіть вашу електронну адресу')
+              a(href="#").site-btn
+                span Підписатись
