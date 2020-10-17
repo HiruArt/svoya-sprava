@@ -36,6 +36,12 @@ if (UAString.indexOf("Trident") !== -1 && UAString.indexOf("rv:10") !== -1)
 
 $(document).ready(function () {
 
+  $('.sort-block__link').click(function (e){
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $(this).parent().toggleClass('active');
+  });
+
   $(".home__sphere-preview").hover(
     function() {
       $( this ).addClass("hover");
