@@ -6,3 +6,53 @@ block vars
 	- var pageActive = "contactsPage";
 block content
 	div.main-wrap
+		.contacts
+			.contacts__inner.site-container
+				.contacts__title.site-title
+					span Контакти
+				.contacts__items
+					.contacts__item
+						.contacts__img.contacts__img--position
+							include ../img/contacts/1.svg
+						.contacts__desc
+							.contacts__name Адреса:
+							.contacts__txt
+								p ПФ "Своя Справа"
+								p Житомир, майдан Путятинський, 2
+								p оф. 421/3, м. Житомир, 10002
+					.contacts__item
+						.contacts__img.contacts__img--phone
+							include ../img/contacts/2.svg
+						.contacts__desc
+							.contacts__name Телефони:
+							.contacts__txt
+								a(href='#') +38 (0412) 44-64-32
+								a(href='#') +38 (067) 391-77-26
+					.contacts__item
+						.contacts__img.contacts__img--email
+							include ../img/contacts/3.svg
+						.contacts__desc
+							.contacts__name Email:
+							.contacts__txt
+								a(href='#') office@sprava.in.ua
+					.contacts__item
+						.contacts__img.contacts__img--time
+							include ../img/contacts/4.svg
+						.contacts__desc
+							.contacts__name Години роботи:
+							.contacts__txt
+								p Житомир, майдан Путятинський, 2
+								p оф. 421/3, м. Житомир, 10002
+					.contacts__item
+						.contacts__img.contacts__img--soc
+							include ../img/contacts/5.svg
+						.contacts__desc
+							.contacts__name Ми в соц.мережах:
+							.contacts__txt.contacts__txt--row
+								a(href='#').contacts__social.fb
+								a(href='#').contacts__social.inst
+								a(href='#').contacts__social.in
+
+			.contacts__map
+				iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2551.329424105478!2d28.68365431554015!3d50.24843140978192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c636228281c61%3A0x6909002349ca0ef4!2z0J_Rg9GC0Y_RgtC40L3RgdGM0LrQuNC5INC80LDQudC00LDQvSwgMiwg0JbQuNGC0L7QvNC40YAsINCW0LjRgtC-0LzQuNGA0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDEwMDAy!5e0!3m2!1sru!2sua!4v1603023682860!5m2!1sru!2sua' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+
