@@ -267,6 +267,34 @@ $(document).ready(function () {
   /*validation end*/
 
 
+  if($(window).width() > 992) {
+    var scenes = [];
+    var scenesSelector = document.querySelectorAll('.scene');
+
+
+    for (var i = 0; i < scenesSelector.length; i++) {
+      scenes[i] = new Parallax(scenesSelector[i], {
+        relativeInput: true,
+        calibrateX: true
+      });
+    }
+
+    function scenesEnable() {
+      for (i = 0; i < scenes.length; i++) {
+        scenes[i].enable();
+      }
+    }
+
+    function scenesDisable() {
+      for (i = 0; i < scenes.length; i++) {
+        scenes[i].disable();
+      }
+    }
+
+    scenesEnable();
+  }
+
+
 });
 
 

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 293.58 293.58">
+    <defs>
+        <style>
+            .cls-1{fill:none;}.cls-2{isolation:isolate;}.cls-3{mix-blend-mode:screen;}.cls-4{clip-path:url(#clip-path);}.cls-5{clip-path:url(#clip-path-2);}.cls-6{fill:url(#Безымянный_градиент_26);}
+        </style>
+        <clipPath id="clip-path" transform="translate(69.85 69.85)">
+            <rect class="cls-1" width="153.87" height="153.87"/>
+        </clipPath>
+        <clipPath id="clip-path-2" transform="translate(69.85 69.85)">
+            <path class="cls-1" d="M105.24,5.42A76.91,76.91,0,1,1,5.42,48.63,76.92,76.92,0,0,1,105.24,5.42"/>
+        </clipPath>
+        <radialGradient id="Безымянный_градиент_26" cx="133.55" cy="248.95" r="1"
+                        gradientTransform="matrix(202.89, 0, 0, -202.89, -27095.08, 50653.55)"
+                        gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#434343"/>
+            <stop offset="0.5" stop-color="#444"/>
+            <stop offset="0.62" stop-color="#3a3a3a"/>
+            <stop offset="0.82" stop-color="#1f1f1f"/>
+            <stop offset="1"/>
+        </radialGradient>
+    </defs>
+    <title>parallax-circle</title>
+    <g class="cls-2">
+        <g id="Слой_1" data-name="Слой 1">
+            <g class="cls-3">
+                <g class="cls-4">
+                    <g class="cls-5">
+                        <rect class="cls-6" x="-36.17" y="-36.17" width="226.21" height="226.21"
+                              transform="translate(46.94 190.01) rotate(-68.41)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

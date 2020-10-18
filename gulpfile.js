@@ -99,6 +99,7 @@ gulp.task('js-libs', () => {
       // 'node_modules/aos/dist/aos.js',
       // 'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
       // 'node_modules/swiper/swiper-bundle.min.js',
+      'node_modules/parallax-js/dist/parallax.min.js'
     ])
     .pipe(gulp.dest('dist/js/libs/'))
     .pipe(concat('libs.js'))

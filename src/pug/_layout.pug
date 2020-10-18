@@ -20,7 +20,10 @@ html(lang="ru")
 
 
 
-	body(class="page " + pageClass)
+	body(class="page " + pageClass).b-lazy.webp-img(data-webp=""
+		data-webp-mobile="./img/mobile-bg-home.webp"
+		data-img=""
+		data-img-mobile="./img/mobile-bg-home.jpg")
 		include modules/_header
 
 		main.page__content(class="page__content " )

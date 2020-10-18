@@ -488,6 +488,25 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    svg{
+      display: block;
+
+      &:last-child{
+        display: none;
+      }
+    }
+  }
+
+  &.menu-open &__nav-title-ico{
+
+    svg{
+      display: none;
+
+      &:last-child{
+        display: block;
+      }
+    }
   }
 
   &__nav-list{
@@ -772,6 +791,10 @@ input{
 
 }
 
+.page:not(.home-page){
+  background-image: none!important;
+}
+
 .home-page{
 
   @include from-992 {
@@ -792,24 +815,40 @@ input{
       width: 100%;
     }
   }
+
+  @include for-992{
+    background-image: url('../img/home-mobile-bg.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .home{
 
   &__inner{
-
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   &__content{
     display: flex;
+    position: relative;
+    z-index: 2;
 
     @include from-992 {
-      height: 100vh;
       position: relative;
       padding-top: 80px;
       padding-bottom: 110px;
+      height: 100vh;
     }
 
+    @include for-992{
+      padding-top: 70px;
+      padding-bottom: 80px;
+      flex-direction: column;
+    }
   }
 
   &__info{
@@ -818,6 +857,15 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include for-1400{
+      max-width: 550px;
+    }
+
+    @include for-992{
+      max-width: 100%;
+      justify-content: flex-start;
+    }
   }
 
   &__info-title{
@@ -825,6 +873,18 @@ input{
     font-size: 72px;
     font-family: 'Lora', sans-serif;
     font-weight: 700;
+
+    @include for-1700{
+      font-size: 54px;
+    }
+
+    @include from-1400{
+      font-size: 34px;
+    }
+
+    @include for-992{
+      font-size: 45px;
+    }
   }
 
   &__info-txt{
@@ -832,6 +892,15 @@ input{
     font-size: 20px;
     padding-top: 20px;
     padding-bottom: 80px;
+
+    @include for-1700{
+      font-size: 18px;
+      padding-bottom: 50px;
+    }
+
+    @include for-992{
+      padding-bottom: 30px;
+    }
   }
 
   &__info-form{
@@ -846,6 +915,14 @@ input{
       background-color: rgb(255, 255, 255);
       border-radius: 40px;
       overflow: hidden;
+
+      @include for-992{
+        flex-direction: column;
+        align-items: center;
+        overflow: initial;
+        border-radius: 0;
+        background: transparent;
+      }
     }
   }
 
@@ -861,6 +938,19 @@ input{
     border-style: solid;
     width: 100%;
     border-radius: 40px;
+
+    @include for-1400{
+      height: 50px;
+      padding-right: 180px;
+    }
+
+    @include for-992{
+      padding: 0 15px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      height: 65px;
+      background-color: rgb(255, 255, 255);
+    }
   }
 
   .home__info-form-btn{
@@ -878,10 +968,21 @@ input{
     max-width: 250px;
     width: 100%;
     color: white;
-    font-size: 15px;
     margin: 0;
     padding: 0;
     cursor: pointer;
+    font-size: 18px;
+
+    @include for-1400{
+      max-width: 180px;
+      font-size: 16px;
+    }
+
+    @include for-992{
+      max-width: 255px;
+      height: 65px;
+      position: static;
+    }
 
     &:hover{
       background: #bf0909;
@@ -891,6 +992,10 @@ input{
   &__sphere{
     width: 100%;
     height: 100%;
+
+    @include for-992{
+      display: none;
+    }
   }
 
   &__sphere-list{
@@ -904,11 +1009,29 @@ input{
     position: absolute;
     transform: translate(-50%, -50%);
 
+    &:nth-child(n+10){
+
+      .home__sphere-preview{
+        opacity: .5;
+      }
+
+      &.active .home__sphere-preview,
+      .home__sphere-preview.hover{
+        opacity: 1;
+      }
+    }
+
+
     &--1{
       width: 256px;
       height: 256px;
       left: 56%;
       top: 45%;
+
+      @include for-1700{
+        width: 16vw;
+        height: 16vw;
+      }
     }
 
     &--2{
@@ -916,6 +1039,11 @@ input{
       height: 225px;
       left: 22%;
       top: 28%;
+
+      @include for-1700{
+        width: 14.0625vw;
+        height: 14.0625vw;
+      }
     }
 
     &--3{
@@ -992,6 +1120,27 @@ input{
       height: 75px;
       left: 77%;
       top: 53%;
+    }
+
+    &--3, &--4, &--5{
+      @include for-1700{
+        width: 11.25vw;
+        height: 11.25vw;
+      }
+    }
+
+    &--6, &--7, &--8, &--9{
+      @include for-1700{
+        width: 6.875vw;
+        height: 6.875vw;
+      }
+    }
+
+    &--10, &--11, &--12{
+      @include for-1700{
+        width: 4.6875vw;
+        height: 4.6875vw;
+      }
     }
   }
 
@@ -1156,6 +1305,7 @@ input{
 
     span{
       font-weight: 400;
+      margin-top: 3px;
     }
 
     &:before{
@@ -1171,6 +1321,303 @@ input{
     }
   }
 
+
+  &__parallax{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    @include for-992{
+      display: none;
+    }
+  }
+
+  &__parallax-item{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &--1{
+      width: 22vw;
+      height: 22vw;
+      left: 13%;
+      top: 60%;
+      z-index: 10;
+      filter: blur(8px);
+      opacity: .8;
+
+      .home__parallax-item-inner{
+        animation: pulse 10s -3s infinite;
+      }
+
+      .home__parallax-item-i{
+        background: linear-gradient(187deg, rgba(237,199,61,0) 0%, rgba(255,255,255,1) 100%);
+      }
+
+    }
+
+    &--2{
+      width: 33vw;
+      height: 33vw;
+      left: 13%;
+      top: 60%;
+      opacity: .2;
+      z-index: 5;
+
+      .home__parallax-item-inner{
+        animation: pulse 12s 1s infinite;
+      }
+
+      .home__parallax-item-i{
+        background: linear-gradient(187deg, rgba(237,199,61,0) 0%, rgba(255,255,255,1) 100%);
+      }
+    }
+
+    &--3{
+      width: 16vw;
+      height: 16vw;
+      left: 48%;
+      top: 25%;
+      z-index: 5;
+      opacity: .8;
+      filter: blur(5px);
+
+      .home__parallax-item-inner{
+        animation: pulse 5s 2s infinite;
+      }
+
+      .home__parallax-item-i{
+        background: linear-gradient(-90deg, rgba(237,199,61,0) 0%, rgba(255,255,255,1) 100%);
+      }
+    }
+
+    &--4{
+      left: 66%;
+      top: 10%;
+      width: 20vw;
+      height: 20vw;
+      z-index: 5;
+      opacity: .6;
+
+      .home__parallax-item-inner{
+        animation: pulse 11s -5s infinite;
+      }
+
+      .home__parallax-item-i{
+        background: linear-gradient(-90deg, rgba(237,199,61,0) 0%, rgba(255,255,255,1) 100%);
+      }
+    }
+    &--5{
+      left: 59%;
+      top: 36%;
+      width: 8.5vw;
+      height: 8.5vw;
+      z-index: 2;
+      opacity: .7;
+
+      .home__parallax-item-inner{
+        animation: pulse 11s -5s infinite;
+      }
+
+      .home__parallax-item-i{
+        background: linear-gradient(-90deg, rgba(237,199,61,0) 0%, rgba(255,255,255,1) 100%);
+      }
+    }
+    &--6{
+      left: 84%;
+      top: 26%;
+      width: 15vw;
+      height: 15vw;
+      z-index: 6;
+      opacity: .5;
+
+      .home__parallax-item-inner{
+        animation: pulse 8s -2s infinite;
+      }
+
+      .home__parallax-item-i{
+        background: linear-gradient(187deg, rgba(237,199,61,0) 0%, rgba(255,255,255,1) 100%);
+      }
+    }
+    &--7{
+      left: 95%;
+      top: 8%;
+      width: 15vw;
+      height: 15vw;
+      z-index: 3;
+      filter: blur(5px);
+      opacity: 1;
+
+      .home__parallax-item-inner{
+        animation: pulse 11s -2s infinite;
+      }
+
+      .home__parallax-item-i{
+        background: linear-gradient(-90deg, rgba(237,199,61,0) 0%, rgba(255,255,255,1) 100%);
+      }
+    }
+    &--8{
+      left: 91%;
+      top: 38%;
+      width: 8vw;
+      height: 8vw;
+      z-index: 6;
+      opacity: .9;
+
+      .home__parallax-item-inner{
+        animation: pulse 8s -2s infinite;
+      }
+
+      .home__parallax-item-i{
+        background: linear-gradient(187deg, rgba(237,199,61,0) 0%, rgba(255,255,255,1) 100%);
+      }
+    }
+    &--9{
+      left: 29%;
+      top: 24%;
+      width: 16vw;
+      height: 16vw;
+      filter: blur(15px);
+      z-index: 6;
+      opacity: .8;
+
+      .home__parallax-item-inner{
+        animation: pulse 10s -9s infinite;
+      }
+
+      .home__parallax-item-i{
+        background: linear-gradient(-90deg, rgba(237,199,61,0) 0%, rgba(255,255,255,1) 100%);
+      }
+    }
+  }
+
+  &__parallax-item-content{
+    height: 100%;
+    width: 100%;
+  }
+
+  &__parallax-item-inner{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  &__parallax-item-i{
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-radius: 50%;
+  }
+
+  &__mobile-content{
+    width: 100%;
+    padding-top: 70px;
+  }
+
+  &__mobile-list{
+    display: flex;
+    width: 100%;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+  }
+
+  &__mobile-item-wrap{
+    padding: 0 15px;
+    margin-bottom: 30px;
+    width: 50%;
+
+    @include for-768{
+      width: 100%;
+    }
+  }
+
+  &__mobile-item{
+    display: flex;
+    align-items: center;
+  }
+
+  &__mobile-ico{
+    width: 100%;
+    max-width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: white;
+    transition: .15s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__mobile-item:active &__mobile-ico,
+  &__mobile-item:focus &__mobile-ico,
+  &__mobile-item:hover &__mobile-ico{
+    background: #bf0909;
+    border-color: #bf0909;
+  }
+
+  &__mobile-ico-inner{
+    width: 45%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__mobile-ico-i{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__mobile-ico-hover{
+    transition: .15s;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #bf0909;
+  }
+
+  &__mobile-item:active &__mobile-ico-hover,
+  &__mobile-item:focus &__mobile-ico-hover,
+  &__mobile-item:hover &__mobile-ico-hove{
+    opacity: 1;
+  }
+
+  &__mobile-item-name{
+    color: black;
+    font-size: 25px;
+    font-weight: 900;
+    padding-left: 15px;
+  }
+
+
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
 }
 
 
@@ -1279,7 +1726,6 @@ input{
     height: 100%;
     //background: url("../img/ico/close.svg") center no-repeat;
     background-size: contain;
-
   }
 
 }

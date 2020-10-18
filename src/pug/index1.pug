@@ -7,7 +7,50 @@ block vars
 block content
   div.main-wrap
     .home
-      .home__inner
+      .home__inner.b-lazy.webp-img(data-webp="./img/home-bg-new.webp"
+        data-webp-mobile=""
+        data-img="./img/home-bg-new.jpg"
+        data-img-mobile="")
+
+        .home__parallax
+          .home__parallax-item.home__parallax-item--1(style="opacity: 1;")
+            .home__parallax-item-inner
+             .home__parallax-item-content.scene
+               .home__parallax-item-i(data-depth="0.2")
+          .home__parallax-item.home__parallax-item--2
+            .home__parallax-item-inner
+             .home__parallax-item-content.scene
+               .home__parallax-item-i(data-depth="0.1")
+          .home__parallax-item.home__parallax-item--3
+            .home__parallax-item-inner
+             .home__parallax-item-content.scene
+               .home__parallax-item-i(data-depth="0.3")
+          .home__parallax-item.home__parallax-item--4
+            .home__parallax-item-inner
+             .home__parallax-item-content.scene
+               .home__parallax-item-i(data-depth="0.2")
+          .home__parallax-item.home__parallax-item--5
+            .home__parallax-item-inner
+             .home__parallax-item-content.scene
+               .home__parallax-item-i(data-depth="0.1")
+          .home__parallax-item.home__parallax-item--6
+            .home__parallax-item-inner
+             .home__parallax-item-content.scene
+               .home__parallax-item-i(data-depth="0.3")
+          .home__parallax-item.home__parallax-item--7
+            .home__parallax-item-inner
+             .home__parallax-item-content.scene
+               .home__parallax-item-i(data-depth="0.2")
+          .home__parallax-item.home__parallax-item--8
+            .home__parallax-item-inner
+             .home__parallax-item-content.scene
+               .home__parallax-item-i(data-depth="0.1")
+          .home__parallax-item.home__parallax-item--9
+            .home__parallax-item-inner
+             .home__parallax-item-content.scene
+               .home__parallax-item-i(data-depth="0.3")
+
+        //.home__content.site-container(style="visibility: hidden; opacity: 0; z-index: -1;")
         .home__content.site-container
           .home__info
             .home__info-title Перейдіть від усвідомлення до дії вирішення
@@ -16,6 +59,51 @@ block content
               form
                 input(type="text" placeholder="Яка бізнес-задача для Вас актуальна?").home__info-form-input
                 input(type="submit" value="Знайти експертизу").home__info-form-btn
+
+          .home__mobile-content.tablet
+            .home__mobile-list
+              .home__mobile-item-wrap
+                a(href="#").home__mobile-item
+                  .home__mobile-ico
+                    .home__mobile-ico-inner
+                      img(src="./img/ico/sphere01-ico2.png" alt="ico").home__mobile-ico-i
+                      img(src="./img/ico/sphere01hover-ico.png" alt="ico").home__mobile-ico-hover
+                  .home__mobile-item-name Торгівля
+              .home__mobile-item-wrap
+                a(href="#").home__mobile-item
+                  .home__mobile-ico
+                    .home__mobile-ico-inner
+                      img(src="./img/ico/sphere02-ico.png" alt="ico").home__mobile-ico-i
+                      img(src="./img/ico/sphere02hover-ico.png" alt="ico").home__mobile-ico-hover
+                  .home__mobile-item-name Будівництво
+              .home__mobile-item-wrap
+                a(href="#").home__mobile-item
+                  .home__mobile-ico
+                    .home__mobile-ico-inner
+                      img(src="./img/ico/sphere01-ico2.png" alt="ico").home__mobile-ico-i
+                      img(src="./img/ico/sphere01hover-ico.png" alt="ico").home__mobile-ico-hover
+                  .home__mobile-item-name Торгівля
+              .home__mobile-item-wrap
+                a(href="#").home__mobile-item
+                  .home__mobile-ico
+                    .home__mobile-ico-inner
+                      img(src="./img/ico/sphere02-ico.png" alt="ico").home__mobile-ico-i
+                      img(src="./img/ico/sphere02hover-ico.png" alt="ico").home__mobile-ico-hover
+                  .home__mobile-item-name Будівництво
+              .home__mobile-item-wrap
+                a(href="#").home__mobile-item
+                  .home__mobile-ico
+                    .home__mobile-ico-inner
+                      img(src="./img/ico/sphere01-ico2.png" alt="ico").home__mobile-ico-i
+                      img(src="./img/ico/sphere01hover-ico.png" alt="ico").home__mobile-ico-hover
+                  .home__mobile-item-name Торгівля
+              .home__mobile-item-wrap
+                a(href="#").home__mobile-item
+                  .home__mobile-ico
+                    .home__mobile-ico-inner
+                      img(src="./img/ico/sphere02-ico.png" alt="ico").home__mobile-ico-i
+                      img(src="./img/ico/sphere02hover-ico.png" alt="ico").home__mobile-ico-hover
+                  .home__mobile-item-name Будівництво
 
           .home__sphere
             .home__sphere-list
