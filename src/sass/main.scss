@@ -142,6 +142,11 @@ input{
   font-weight: bold;
   padding: 60px 0;
 
+  @include for-768{
+    font-size: 30px;
+    padding: 30px 0;
+  }
+
   span{
     position: relative;
 
@@ -156,6 +161,10 @@ input{
       height: 4px;
       background: black;
       margin-left: -10px;
+
+      @include for-768{
+        height: 2px;
+      }
     }
     &:after{
       content: "";
@@ -168,6 +177,10 @@ input{
       height: 4px;
       background: black;
       margin-right: -10px;
+
+      @include for-768{
+        height: 2px;
+      }
     }
   }
 
@@ -189,6 +202,15 @@ input{
     position: relative;
     z-index: 2;
     top: -1px;
+
+    @include for-1300{
+      font-size: 13px;
+    }
+  }
+
+  @include for-1300{
+    padding: 0 10px;
+    height: 25px;
   }
 
   &:before{
@@ -202,6 +224,11 @@ input{
     border-radius: 50%;
     background: #f32b2e;
     transition: 0.3s;
+
+    @include for-1300{
+      height: 23px;
+      width: 23px;
+    }
   }
 
   &:hover{
@@ -1216,19 +1243,49 @@ input{
     margin-top: 70px;
     padding-bottom: 20px;
     border-bottom: 1px solid #cccccc;
+
+    @include for-992{
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+    }
   }
 
   &__bottom-txt{
     display: flex;
     align-items: center;
 
+    @include for-1300{
+      max-width: 800px;
+    }
+
+    @include for-1200{
+      max-width: 550px;
+      font-size: 15px;
+    }
+
+    @include for-768{
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+
+    @include for-550{
+      font-size: 13px;
+    }
+
     &:before{
       content: "";
       display: block;
-      width: 60px;
+      min-width: 60px;
       height: 60px;
       background: url("../img/massege.png") center center no-repeat;
+      background-size: contain;
       margin-right: 15px;
+
+      @include for-1200{
+        min-width: 40px;
+        height: 40px;
+      }
     }
   }
 
@@ -1243,6 +1300,11 @@ input{
       font-size: 15px;
       margin-right: 40px;
       width: 240px;
+
+      @include for-550{
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
 
       &::placeholder{
         color: #666666;
@@ -1273,8 +1335,32 @@ input{
     flex-direction: column;
     margin-bottom: 20px;
 
+    @include for-1300{
+      width: 33%;
+    }
+
+    @include for-768{
+      width: 50%;
+    }
+
+    @include for-550{
+      width: 100%;
+    }
+
     &--big{
       width: 40%;
+
+      @include for-1300{
+        width: 66%;
+      }
+
+      @include for-768{
+        width: 50%;
+      }
+
+      @include for-550{
+        width: 100%;
+      }
 
       .cards__content{
         text-align: center;
@@ -1298,6 +1384,10 @@ input{
         font-size: 25px;
         margin-left: auto;
         margin-right: auto;
+
+        @include for-1300{
+          font-size: 20px;
+        }
       }
 
       .cards__desc{
@@ -1305,6 +1395,12 @@ input{
         text-align: left;
         line-height: 35px;
         font-weight: bold;
+
+        @include for-1300{
+          line-height: 25px;
+          font-size: 20px;
+          margin-top: 10px;
+        }
       }
     }
   }
@@ -1316,6 +1412,10 @@ input{
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding-bottom: 40px;
+
+    @include for-992{
+      padding-bottom: 20px;
+    }
   }
 
   &__label{
@@ -1330,6 +1430,10 @@ input{
     top: 30px;
     left: 7px;
     font-size: 15px;
+
+    @include for-1300{
+      font-size: 14px;
+    }
 
     &.red{
       background: #ac1019;
@@ -1348,12 +1452,20 @@ input{
     height: 100%;
     display: flex;
     flex-direction: column;
+
+    @include for-992{
+      padding: 0 20px;
+    }
   }
 
   &__date{
     font-size: 14px;
     color: #999999;
     margin-top: 35px;
+
+    @include for-1300{
+      font-size: 12px;
+    }
   }
 
   &__title{
@@ -1361,12 +1473,20 @@ input{
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 20px;
+
+    @include for-1300{
+      font-size: 16px;
+    }
   }
 
   &__desc{
     font-size: 15px;
     color: #666666;
     margin-bottom: 20px;
+
+    @include for-1300{
+      font-size: 14px;
+    }
   }
 
   &__btn{
@@ -1384,11 +1504,25 @@ input{
 
     padding-bottom: 12px;
     border-bottom: 1px solid #d6d6d6;
+
+    @include for-768{
+      flex-direction: column;
+      height: auto;
+    }
   }
 
   &__item{
     position: relative;
     margin-right: 90px;
+
+    @include for-768{
+      margin-right: 0;
+      margin-bottom: 15px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
 
     &.active{
       .sort-block__list{
@@ -1449,7 +1583,7 @@ input{
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 2;
+    z-index: 10;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 12px 35px 0px rgba(0, 0, 0, 0.2);
