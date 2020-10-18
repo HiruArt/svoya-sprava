@@ -1690,3 +1690,187 @@ input{
 
 }
 
+.contacts{
+
+  &__inner{
+
+  }
+
+  &__title{
+
+  }
+
+  &__items{
+    display: flex;
+    justify-content: space-between;
+
+    @include for-1400{
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &__item{
+    display: flex;
+
+    @include for-1400{
+      width: 33%;
+      margin-bottom: 40px;
+    }
+
+    @include for-992{
+      width: 50%;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    @include for-550{
+      width: 100%;
+    }
+  }
+
+  &__img{
+    margin-right: 15px;
+
+    svg{
+      path{
+        fill: #bf0909;
+      }
+    }
+
+    &--position{
+      min-width: 40px;
+
+      @include for-1600{
+        min-width: 30px;
+      }
+
+      @include for-992{
+        margin-right: 35px;
+      }
+    }
+
+    &--phone{
+      min-width: 50px;
+
+      @include for-1600{
+        min-width: 40px;
+      }
+
+      @include for-550{
+        margin-right: 25px;
+      }
+    }
+
+    &--email{
+      min-width: 65px;
+
+      @include for-1600{
+        min-width: 50px;
+      }
+
+      @include for-550{
+        margin-right: 14px;
+      }
+    }
+
+    &--time{
+      min-width: 50px;
+
+      @include for-1600{
+        min-width: 40px;
+      }
+
+      @include for-550{
+        margin-right: 23px;
+      }
+    }
+
+    &--soc{
+      min-width: 45px;
+
+      @include for-1600{
+        min-width: 35px;
+      }
+
+      @include for-550{
+        margin-right: 26px;
+      }
+    }
+
+  }
+
+  &__desc{
+    border-left: 1px solid #c8c8c8;
+    padding-left: 15px;
+    color: #666666;
+  }
+
+  &__name{
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  &__txt{
+    display: flex;
+    flex-direction: column;
+
+    p{
+      margin: 0;
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    a{
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    &--row{
+      flex-direction: row;
+    }
+
+  }
+
+  &__social{
+    margin-right: 10px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &.fb{
+      width: 50px;
+      height: 50px;
+      background: url("../img/contacts/fb.png") center center no-repeat;
+      background-size: contain;
+    }
+
+    &.inst{
+      width: 50px;
+      height: 50px;
+      background: url("../img/contacts/inst.png") center center no-repeat;
+      background-size: contain;
+    }
+
+    &.in{
+      width: 50px;
+      height: 50px;
+      background: url("../img/contacts/in.png") center center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__map{
+    iframe{
+      width: 100%;
+      height: 450px;
+    }
+  }
+
+}
+
