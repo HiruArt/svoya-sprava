@@ -214,6 +214,38 @@ input{
       border-radius: 20px;
     }
   }
+
+  &--dark{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding-right: 55px;
+    position: relative;
+
+    span{
+      color: white;
+    }
+
+    &:before{
+      background: black;
+    }
+  }
+
+  &__ico{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 23px;
+    display: flex;
+    align-items: center;
+
+
+    svg{
+      width: 100%;
+    }
+  }
 }
 
 
@@ -910,8 +942,29 @@ input{
     &--9{
       width: 110px;
       height: 110px;
-      left: 94%;
+      left: 64%;
+      top: 75%;
+    }
+
+    &--10{
+      width: 75px;
+      height: 75px;
+      left: 57%;
+      top: 94%;
+    }
+
+    &--11{
+      width: 75px;
+      height: 75px;
+      left: 34%;
       top: 51%;
+    }
+
+    &--12{
+      width: 75px;
+      height: 75px;
+      left: 77%;
+      top: 53%;
     }
   }
 
@@ -933,11 +986,6 @@ input{
       border-color: #bf0909;
     }
   }
-
-  &__sphere-item.active  &__sphere-preview{
-    opacity: 0;
-  }
-
   &__sphere-preview-ico{
     width: 40%;
     height: 40%;
@@ -966,6 +1014,9 @@ input{
   &__sphere-preview.hover &__sphere-preview-ico-hover-bg{
     opacity: 1;
   }
+  &__sphere-item.active   &__sphere-preview-ico-hover-bg{
+    opacity:1;
+  }
 
   &__sphere-preview-ico-hover{
     width: 40%;
@@ -979,8 +1030,12 @@ input{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    object-fit: contain;
   }
   &__sphere-preview.hover &__sphere-preview-ico-hover{
+    opacity: 1;
+  }
+  &__sphere-item.active &__sphere-preview-ico-hover{
     opacity: 1;
   }
 
@@ -1042,7 +1097,6 @@ input{
 
   &__sphere-detail-ico-i{
     width: 100%;
-    height: 100%;
     object-fit: contain;
   }
 
@@ -1071,10 +1125,22 @@ input{
   }
 
   &__sphere-detail-btn-i{
+    height: 50px;
 
+    span{
+      font-weight: 400;
+    }
 
-    .site-btn__ico{
-      width: 10px;
+    &:before{
+      height: 50px;
+      width: 50px;
+    }
+
+    &:hover{
+
+      &:before{
+        border-radius: 50px;
+      }
     }
   }
 

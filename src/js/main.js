@@ -65,9 +65,26 @@ $(document).ready(function () {
     $(this).closest('.home__sphere-detail').removeClass('active');
   });
 
+	$(document).on('click', '.home__sphere-detail-close', function (e) {
+		var numberItem = $(this).closest('.home__sphere-detail').attr('data-sphere-detail');
+		$('[data-sphere-item=' + numberItem + ']').removeClass('active');
+		$(this).closest('.home__sphere-detail').removeClass('active');
+	});
+
+	$(document).on('click', function (e) {
+		// console.log('item:', $(e.target).closest('.home__sphere-item').length);
+		// console.log('detail:', $(e.target).closest('.home__sphere-detail').length);
+
+		if( $(e.target).closest('.home__sphere-detail').length === 0 &&
+			  ($(e.target).closest('.home__sphere-item').length === 0 && $(e.target).closest('.home__sphere-detail').length === 0 )) {
+			$('[data-sphere-detail]').removeClass('active');
+			$('[data-sphere-item]').removeClass('active');
+		}
+	});
 
 
-  var bLazy = new Blazy({
+
+	var bLazy = new Blazy({
     src: 'data-blazy' // Default is data-src
   });
 
