@@ -131,7 +131,7 @@ $(document).ready(function () {
         var webp;
         if($(this).data('webp-mobile') !== undefined)
           webp = $(this).data('webp-mobile'); else webp = $(this).data('webp');
-        console.log($(this).data('webp-mobile'));
+        // console.log($(this).data('webp-mobile'));
         $(this).attr('data-blazy', webp);
       });
     }
@@ -294,6 +294,30 @@ $(document).ready(function () {
     scenesEnable();
   }
 
+
+  $(document).on('click', '.contact-form__close', function (e) {
+		$(this).closest('.contact-form').removeClass('open');
+	});
+
+  $(document).on('click', '.contact-form-btn', function (e) {
+		$('.contact-form').addClass('open');
+
+		if($(window).width() < 992){
+			$(".contact-form__inner").animate({ scrollTop: 0 }, 500);
+		}
+	});
+
+  $(document).on('click', '.contact-form__right-contactus', function (e) {
+		$('.contact-form__right-link').removeClass('active');
+		$('.contact-form__right-form').addClass('active');
+	});
+
+	$(document).on('click', function (e) {
+		if( $(e.target).closest('.contact-form').length === 0 &&
+			($(e.target).closest('.contact-form-btn').length === 0 && $(e.target).closest('.contact-form').length === 0 )) {
+			$('.contact-form').removeClass('open');
+		}
+	});
 
 });
 

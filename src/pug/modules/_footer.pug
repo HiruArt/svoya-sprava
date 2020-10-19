@@ -1,63 +1,69 @@
 footer.footer
-  .footer__inner.site-container
-    .footer__content
-      .footer__column © 2020 Своя справа. All rights reserved
+	.footer__inner.site-container
+		.footer__content
+			.footer__column © 2020 Своя справа. All rights reserved
 
-
+a(href="javascript:void(0);").contact-form-btn
+	.contact-form-btn-ico
+		include ../../img/ico/phone-black.svg
+	span Зворотній зв’язок
 .contact-form
-  .contact-form__inner
-    .contact-form__left
-      .contact-form__left-head Зателефонуйте нам <br> за номером
-      a(href="tel:+380412446432").contact-form__left-phone +38 (0412) 44-64-32
-      .contact-form__left-or або
-      .contact-form__left-caption скористайтесь послугою <br> “зворотній дзвінок”
-      a(href="javascript:void(0);").contact-form__left-btn Зворотний дзвінок
-    .contact-form__right
-      .contact-form__right-link
-        .contact-form__right-contactus
-          .contact-form__right-contactus-ico
-            include ../../img/contacts/3.svg
-          span Зв’яжіться з нами
-        .contact-form__right-txt Надішліть нам свої коментарі, запитання та відгуки електронною поштою.
-      .contact-form__right-form
-        .contact-form__right-form-i.site-form
-          .site-form__title
-          .site-form__row
-            .site-form__input
-              label Ім`я
-              input(type="text")
-          .site-form__row
-            .site-form__custom
-              label
-              .site-form__input-list
-                .site-form__input-item
-                  .site-form__radio
-                    input(type="radio" name="contactFormRadio" id="contactFormRadio1")
-                    label(for="contactFormRadio1") Телефон
+	.contact-form__inner
+		.contact-form__left
+			.contact-form__left-head Зателефонуйте нам <br> за номером
+			a(href="tel:+380412446432").contact-form__left-phone +38 (0412) 44-64-32
+			.contact-form__left-or
+				span або
+			.contact-form__left-caption скористайтесь послугою <br> “зворотній дзвінок”
+			a(href="javascript:void(0);").contact-form__left-btn Зворотний дзвінок
+		.contact-form__right
+			.contact-form__right-link.active
+				.contact-form__right-contactus
+					.contact-form__right-contactus-ico
+						include ../../img/contacts/3.svg
+					span Зв’яжіться з нами
+				.contact-form__right-txt Надішліть нам свої коментарі, запитання та відгуки електронною поштою.
+			.contact-form__right-form
+				.contact-form__close
+				.contact-form__right-form-i.site-form
+					form
+						.site-form__title Зв’яжіться з нами
+						.site-form__row
+							.site-form__input
+								label Ім`я
+								input(type="text").required
+						.site-form__row
+							.site-form__custom
+								label
+								.site-form__input-list
+									.site-form__input-item
+										.site-form__radio
+											input(type="radio" name="contactFormRadio" id="contactFormRadio1")
+											label(for="contactFormRadio1") Телефон
 
-                .site-form__input-item
-                  .site-form__radio
-                    input(type="radio" name="contactFormRadio" id="contactFormRadio2")
-                    label(for="contactFormRadio2") Телефон
+									.site-form__input-item
+										.site-form__radio
+											input(type="radio" name="contactFormRadio" id="contactFormRadio2")
+											label(for="contactFormRadio2") Електронна пошта
 
-                .site-form__input-item
-                  .site-form__radio
-                    input(type="radio" name="contactFormRadio" id="contactFormRadio3")
-                    label(for="contactFormRadio3") Телефон
+									.site-form__input-item
+										.site-form__radio
+											input(type="radio" name="contactFormRadio" id="contactFormRadio3")
+											label(for="contactFormRadio3") Viber
 
-                .site-form__input-item
-                  .site-form__radio
-                    input(type="radio" name="contactFormRadio" id="contactFormRadio4")
-                    label(for="contactFormRadio4") Skype
-          .site-form__row
-            .site-form__textarea
-              label Коментарій
-              textarea()
-          .site-form__row
-            .site-form__btn
-              input(type="submit" style="display: none;")
-              a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js
-                span Відправити
+									.site-form__input-item
+										.site-form__radio
+											input(type="radio" name="contactFormRadio" id="contactFormRadio4")
+											label(for="contactFormRadio4") Skype
+						.site-form__row
+							.site-form__textarea
+								label Коментарій
+								textarea().required
+						.site-form__row
+							.site-form__btn
+								input(type="submit" style="display: none;")
+								a(href="javascript:void(0);").site-form__btn-i.site-btn.site-form-submit-js
+									span Відправити
 
 //.popup.callback
 //  .popup__body
