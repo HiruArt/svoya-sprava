@@ -1,0 +1,122 @@
+extends _layout
+
+block vars
+	- var pageTitle = "About page";
+	- var pageClass = "";
+	- var pageActive = "aboutPage";
+block content
+	div.main-wrap
+		.about
+			.about__inner.site-container
+				h1.about__title.site-title
+					span Про нас
+				.about__section.about__section--1
+					.about__img-block
+						.about__img-block-img
+							img(src="./img/about/about01-img.png" alt="img").about__img-block-img-i
+					.about__info-block
+						.about__info-transparent Своя справа: автоматичнi<br> рейки вашого бiзнесу
+						.about__info-red
+							.about__info-red-title.site-smalltitle Що ми робимо
+							p Ви ще не автоматизували власний бізнес? Чи ви вагаєтеся яке саме програмне забезпечення встановити, як його налагодити та навчити персонал?
+							p Або ви задаєтеся питаннями збільшення прибутку та ефективності роботи?
+							p «Своя справа» має завжди декілька індивідуальних рішень ваших задач. Ми встановлюємо та налаштовуємо Підприємство, BAS, КБС, навчаємо ваш персонал працювати з продуктами автоматизації обліку та управління.
+							p «Своя справа» також надає послуги по супроводженню процесів автоматизації.
+
+				.about__our-clients
+					.about__our-clients-title.site-smalltitle Наші клієнти
+					.about__our-clients-slider
+						.swiper-container.our-clients-slider-js
+							.swiper-wrapper
+								.swiper-slide
+									a(href="#").about__our-clients-slider-i
+										img(src="./img/about/client01.png" alt="img")
+								.swiper-slide
+									a(href="#").about__our-clients-slider-i
+										img(src="./img/about/client02.png" alt="img")
+								.swiper-slide
+									a(href="#").about__our-clients-slider-i
+										img(src="./img/about/client03.png" alt="img")
+								.swiper-slide
+									a(href="#").about__our-clients-slider-i
+										img(src="./img/about/client04.png" alt="img")
+								.swiper-slide
+									a(href="#").about__our-clients-slider-i
+										img(src="./img/about/client05.png" alt="img")
+
+							.custom-button
+								.custom-button-prev
+								.custom-button-next
+
+				.about__section.about__section--2
+					.about__info-block
+						.about__info-red
+							.about__info-red-title.site-smalltitle Хто ми
+							p Впроваджувальний центр АБ ПФ "Своя справа" — один з першопроходьців на ринку системної автоматизації. За час своєї інтенсивної роботи ми набули колосального досвіду в реалізації проектів автоматизації в різних сферах бізнес-послуг та виробництва.
+							p Більше того, встигати все і вчасно нам допомагає система проектного менеджменту , який ми почали використовувати ще до того, як це стало мейнстрімом.
+						.about__info-desc
+							img(src="./img/sslogo-small.svg" alt="ico" width="348" height="78")
+							p "Своя справа" – член Громадської організації <strong>"Спілка Автоматизаторів Бізнесу" (САБ)</strong>, що об'єднує професіоналів в області автоматизації бізнесу, які використовують найсучасніші програмні продукти, платформи та сервіси для автоматизації бізнес-процесів.
+					.about__img-block
+						.about__img-block-img
+							img(src="./img/about/about02-img.png" alt="img").about__img-block-img-i
+
+
+				.about__steps
+					.about__steps-inner
+						.about__steps-title.site-smalltitle 5 кроків впровадження
+						.about__steps-list
+							.about__steps-item
+								.about__steps-item-content
+									.about__steps-item-num 1
+									.about__steps-item-txt Ми демонструємо програмне забезпечення та з’ясовуємо потреби і задачі, які потрібно вирішити
+									.about__steps-item-ico
+										img(src="./img/about/step01.svg" alt="img")
+							.about__steps-item
+								.about__steps-item-content
+									.about__steps-item-num 2
+									.about__steps-item-txt Аудит бізнес-процесів та розробка проектної документації
+									.about__steps-item-ico
+										img(src="./img/about/step02.svg" alt="img")
+							.about__steps-item
+								.about__steps-item-content
+									.about__steps-item-num 3
+									.about__steps-item-txt Процес адаптації типового рішення чи розробки оригінальної конфігурації
+									.about__steps-item-ico
+										img(src="./img/about/step03.svg" alt="img")
+							.about__steps-item
+								.about__steps-item-content
+									.about__steps-item-num 4
+									.about__steps-item-txt Процес передачі в дослідну експлуатацію та навчання користувачів
+									.about__steps-item-ico
+										img(src="./img/about/step04.svg" alt="img")
+							.about__steps-item
+								.about__steps-item-content
+									.about__steps-item-num 5
+									.about__steps-item-txt Введення в промислову експлуатацію
+									.about__steps-item-ico
+										img(src="./img/about/step05.svg" alt="img")
+
+				.about__section.about__section--3
+					.about__info-block
+						.about__info-red
+							.about__info-red-title.site-smalltitle Що ми робимо
+							.about__info-red-content
+								.about__info-red-content-img
+									img(src="./img/about/iso-img.png" alt="img" width="195" height="195")
+								.about__info-red-content-txt Ми працюємо по<br> міжнародному<br> стандарту ISO<br> 9001:2000
+						.about__info-transparent Своя справа - це коли<br> результат більший від <br> очікування
+					.about__certificates
+						.about__certificates-list
+							.about__certificates-item
+								a(class="certificates-magnific" href="./img/about/about-setific.png")
+									img(src="./img/about/about-setific.png" alt="img")
+							.about__certificates-item
+								a(class="certificates-magnific" href="./img/about/about-setific.png")
+									img(src="./img/about/about-setific.png" alt="img")
+							.about__certificates-item
+								a(class="certificates-magnific" href="./img/about/about-setific.png")
+									img(src="./img/about/about-setific.png" alt="img")
+							.about__certificates-item
+								a(class="certificates-magnific" href="./img/about/about-setific.png")
+									img(src="./img/about/about-setific.png" alt="img")

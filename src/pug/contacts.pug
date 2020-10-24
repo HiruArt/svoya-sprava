@@ -8,12 +8,14 @@ block content
 	div.main-wrap
 		.contacts
 			.contacts__inner.site-container
-				.contacts__title.site-title
+				h1.contacts__title.site-title
 					span Контакти
 				.contacts__items
 					.contacts__item
+						//.contacts__img.contacts__img--position
+						//	include ../img/contacts/1.svg
 						.contacts__img.contacts__img--position
-							include ../img/contacts/1.svg
+							img(src="/img/contacts/1.svg" alt="ico" width="37")
 						.contacts__desc
 							.contacts__name Адреса:
 							.contacts__txt
@@ -21,31 +23,39 @@ block content
 								p Житомир, майдан Путятинський, 2
 								p оф. 421/3, м. Житомир, 10002
 					.contacts__item
+						//.contacts__img.contacts__img--phone
+						//	include ../img/contacts/2.svg
 						.contacts__img.contacts__img--phone
-							include ../img/contacts/2.svg
+							img( src="/img/contacts/2.svg" alt="ico" width="45")
 						.contacts__desc
 							.contacts__name Телефони:
 							.contacts__txt
 								a(href='#') +38 (0412) 44-64-32
 								a(href='#') +38 (067) 391-77-26
 					.contacts__item
+						//.contacts__img.contacts__img--email
+						//	include ../img/contacts/3.svg
 						.contacts__img.contacts__img--email
-							include ../img/contacts/3.svg
+							img( src="/img/contacts/3.svg" alt="ico" width="60")
 						.contacts__desc
 							.contacts__name Email:
 							.contacts__txt
 								a(href='#') office@sprava.in.ua
 					.contacts__item
+						//.contacts__img.contacts__img--time
+						//	include ../img/contacts/4.svg
 						.contacts__img.contacts__img--time
-							include ../img/contacts/4.svg
+							img( src="/img/contacts/4.svg" alt="ico" width="50")
 						.contacts__desc
 							.contacts__name Години роботи:
 							.contacts__txt
 								p Житомир, майдан Путятинський, 2
 								p оф. 421/3, м. Житомир, 10002
 					.contacts__item
+						//.contacts__img.contacts__img--soc
+						//	include ../img/contacts/5.svg
 						.contacts__img.contacts__img--soc
-							include ../img/contacts/5.svg
+							img( src="/img/contacts/5.svg" alt="ico" width="45")
 						.contacts__desc
 							.contacts__name Ми в соц.мережах:
 							.contacts__txt.contacts__txt--row

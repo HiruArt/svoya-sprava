@@ -38,27 +38,41 @@ a(href="javascript:void(0);").contact-form-btn
 								.site-form__input-list
 									.site-form__input-item
 										.site-form__radio
-											input(type="radio" name="contactFormRadio" id="contactFormRadio1")
+											input(type="radio" name="contactFormRadio" id="contactFormRadio1" data-field-radio="1")
 											label(for="contactFormRadio1") Телефон
 
 									.site-form__input-item
 										.site-form__radio
-											input(type="radio" name="contactFormRadio" id="contactFormRadio2")
+											input(type="radio" name="contactFormRadio" id="contactFormRadio2" data-field-radio="2")
 											label(for="contactFormRadio2") Електронна пошта
 
 									.site-form__input-item
 										.site-form__radio
-											input(type="radio" name="contactFormRadio" id="contactFormRadio3")
+											input(type="radio" name="contactFormRadio" id="contactFormRadio3" data-field-radio="3")
 											label(for="contactFormRadio3") Viber
 
 									.site-form__input-item
 										.site-form__radio
-											input(type="radio" name="contactFormRadio" id="contactFormRadio4")
+											input(type="radio" name="contactFormRadio" id="contactFormRadio4" data-field-radio="4")
 											label(for="contactFormRadio4") Skype
+
+								.site-form__row
+									.site-form__input(data-field-item="1")
+										label Телефон
+										input(type="text").phonemask
+									.site-form__input(data-field-item="2")
+										label Email
+										input(type="email")
+									.site-form__input(data-field-item="3")
+										label Viber
+										input(type="email")
+									.site-form__input(data-field-item="4")
+										label Skype
+										input(type="email")
 						.site-form__row
 							.site-form__textarea
 								label Коментарій
-								textarea().required
+								textarea()
 						.site-form__row
 							.site-form__btn
 								input(type="submit" style="display: none;")

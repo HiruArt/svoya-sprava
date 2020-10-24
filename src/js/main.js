@@ -262,7 +262,7 @@ $(document).ready(function () {
     }
   });
 
-  // $('.phonemask').inputmask("+38(999)99-99-99");
+  $('.phonemask').inputmask("+38(999)99-99-99");
 
   /*validation end*/
 
@@ -318,6 +318,59 @@ $(document).ready(function () {
 			$('.contact-form').removeClass('open');
 		}
 	});
+
+	$(document).on('click', '[data-field-radio]', function (e) {
+
+		$('[data-field-item]').each(function () {
+			if($(this).is(":visible")){
+				$(this).removeClass('active');
+			}
+		});
+
+		var dataRadio = $(this).attr('data-field-radio');
+
+		$('[data-field-item='+ dataRadio +']').addClass('active');
+	});
+
+	$(document).on('click', '.sort-block-mob-js', function (e) {
+    $(this).siblings('.sort-block__items').slideToggle();
+    $(this).toggleClass('show');
+	});
+	$(document).on('click', '.sort-block__title-mobile', function (e) {
+    $('.sort-block-mob-js').click();
+	});
+
+  $('.certificates-magnific').magnificPopup({
+    type:'image',
+    zoom: {
+      enabled: true,
+      duration: 300,
+      easing: 'ease-in-out',
+    }
+
+  });
+
+  var ourClientSlider = new Swiper('.our-clients-slider-js', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 5,
+    navigation: {
+      nextEl: '.custom-button-next',
+      prevEl: '.custom-button-prev',
+    },
+    breakpoints: {
+      550: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 5,
+      },
+    }
+  });
+
 
 });
 

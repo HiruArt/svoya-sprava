@@ -67,12 +67,12 @@ gulp.task('css-libs', () => {
       // 'node_modules/slick-carousel/slick/slick.css',
       // 'node_modules/bootstrap/dist/css/bootstrap.css',
       // 'node_modules/bootstrap-select/dist/css/bootstrap-select.css',
-      // 'node_modules/magnific-popup/dist/magnific-popup.css',
+      'node_modules/magnific-popup/dist/magnific-popup.css',
       // 'node_modules/jquery-ui-dist/jquery-ui.min.css',
       // 'node_modules/owl.carousel/dist/assets/owl.carousel.css',
       // 'node_modules/aos/dist/aos.css',
       // 'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css',
-      // 'node_modules/swiper/swiper-bundle.min.css',
+      'node_modules/swiper/swiper-bundle.min.css',
   ])
     .pipe(gulp.dest('dist/css/libs/'))
     .pipe(concat('libs.css'))
@@ -88,9 +88,9 @@ gulp.task('js-libs', () => {
       // 'node_modules/bootstrap/dist/js/bootstrap.js',
       // 'node_modules/bootstrap-select/dist/js/bootstrap-select.js',
       'node_modules/blazy/blazy.min.js',
-      // 'node_modules/inputmask/dist/jquery.inputmask.js',
+      'node_modules/inputmask/dist/jquery.inputmask.js',
       // 'node_modules/slick-carousel/slick/slick.js',
-      // 'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+      'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
       // 'node_modules/jquery-ui-dist/jquery-ui.min.js',
       // 'node_modules/owl.carousel/dist/owl.carousel.js',
       // 'node_modules/parallax-js/dist/parallax.min.js',
@@ -98,7 +98,7 @@ gulp.task('js-libs', () => {
       // 'node_modules/skrollr/dist/skrollr.min.js',
       // 'node_modules/aos/dist/aos.js',
       // 'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
-      // 'node_modules/swiper/swiper-bundle.min.js',
+      'node_modules/swiper/swiper-bundle.min.js',
       'node_modules/parallax-js/dist/parallax.min.js'
     ])
     .pipe(gulp.dest('dist/js/libs/'))
